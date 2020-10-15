@@ -1,3 +1,5 @@
+This is a clone of https://bitbucket.org/jeffreyness/sample_project
+
 # Python unit testing and amazon web services
 
 So you've wrote an awesome python automation tool that utilizes **boto**,

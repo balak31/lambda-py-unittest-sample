@@ -1,0 +1,13 @@
+image: python:2.7
+
+pipelines:
+  default:
+    - step:
+        script:
+          - pip install -r requirements.txt
+          - python setup.py install
+          - pip install coverage flake8
+          - flake8 sample_project/*py
+          - flake8 tests/*py
+          - coverage run setup.py test
+          - coverage report -m -i --omit=venv/*,.eggs/*,/tmp/*
